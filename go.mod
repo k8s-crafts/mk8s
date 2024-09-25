@@ -1,6 +1,8 @@
 module github.com/k8s-crafts/mk8s
 
-go 1.22.4
+go 1.22
+
+toolchain  go1.22.4
 
 require github.com/spf13/cobra v1.8.1
 

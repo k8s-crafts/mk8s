@@ -13,7 +13,9 @@
 // limitations under the License.
 package main
 
-import "github.com/k8s-crafts/mk8s/cmd"
+import (
+	cmd "github.com/k8s-crafts/mk8s/cmd/mk8s"
+)
 
 func main() {
 	cmd.Execute()
