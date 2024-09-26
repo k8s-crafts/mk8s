@@ -23,15 +23,14 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "mk8s",
-	Short: "mk8s is a CLI tool to set up a simple local microk8s cluster",
-	Long:  "mk8s uses kvm2 driver to launch a VM locally with microk8s",
+	Short: "mk8s is a CLI tool to set up a simple local k8s cluster",
+	Long:  "mk8s uses kvm2 driver to launch a Virtual Machine locally with Kubernetes. Supported Kubernetes distros: microk8s",
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
-	err := rootCmd.Execute()
-	if err != nil {
+	if err := rootCmd.Execute(); err != nil {
 		os.Exit(1)
 	}
 }
